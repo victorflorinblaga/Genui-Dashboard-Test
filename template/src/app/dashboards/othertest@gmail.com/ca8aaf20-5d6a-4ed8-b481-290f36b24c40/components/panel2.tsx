@@ -4,7 +4,7 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/h
 
 const Panel2 = () => {
   return (
-    <div className="relative bg-blue-900 text-white h-screen">
+    <div className="relative bg-blue-900 text-white h-full">
       <div className="absolute inset-0 flex items-center justify-center">
         <h1 className="text-6xl font-bold">Dinosaurs</h1>
       </div>
