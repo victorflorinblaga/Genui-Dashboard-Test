@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 
-const Panel1 = () => {
+const panel1 = () => {
   return (
     <div className="relative bg-blue-900 text-white h-screen">
       <div className="absolute inset-0 flex items-center justify-center">
@@ -51,4 +51,4 @@ const Panel1 = () => {
   );
 };
 
-export default Panel1;
+export default panel1;
