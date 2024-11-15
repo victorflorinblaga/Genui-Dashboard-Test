@@ -1,1 +1,1 @@
-file template
+test content
