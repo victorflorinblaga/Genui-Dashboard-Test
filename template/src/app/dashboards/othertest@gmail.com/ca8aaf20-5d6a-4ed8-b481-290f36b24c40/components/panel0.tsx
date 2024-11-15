@@ -1,63 +1,47 @@
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import React from 'react';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 
-export default function HeroPage() {
+const panelxyz = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-green-100">
-      <h1 className="text-5xl font-bold text-center mb-4">Delicious Food Awaits</h1>
-      <p className="text-lg text-center mb-8">Explore a world of flavors with our wonderful recipes.</p>
-      
-      <NavigationMenu>
-        <NavigationMenuList className="flex space-x-4 mb-8">
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Appetizers</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <NavigationMenuLink>Bruschetta</NavigationMenuLink>
-              <NavigationMenuLink>Stuffed Mushrooms</NavigationMenuLink>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Main Course</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <NavigationMenuLink>Pasta Primavera</NavigationMenuLink>
-              <NavigationMenuLink>Grilled Salmon</NavigationMenuLink>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Desserts</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <NavigationMenuLink>Chocolate Mousse</NavigationMenuLink>
-              <NavigationMenuLink>Tiramisu</NavigationMenuLink>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-      
+    <div className="relative bg-blue-900 text-white h-screen">
+      <div className="absolute inset-0 flex items-center justify-center">
+        <h1 className="text-6xl font-bold">Dinosaurs</h1>
+      </div>
       <Carousel>
         <CarouselContent>
           <CarouselItem>
-            <img src="/images/dish1.jpg" alt="Delicious Dish 1" className="w-full rounded-lg" />
+            <HoverCard>
+              <HoverCardTrigger>
+                <img src="https://example.com/t-rex.jpg" alt="T-Rex" className="w-full h-auto" />
+              </HoverCardTrigger>
+              <HoverCardContent>
+                <h2 className="text-lg font-semibold">T-Rex</h2>
+                <p>The king of the dinosaurs, known for its massive size and powerful jaws.</p>
+              </HoverCardContent>
+            </HoverCard>
           </CarouselItem>
           <CarouselItem>
-            <img src="/images/dish2.jpg" alt="Delicious Dish 2" className="w-full rounded-lg" />
+            <HoverCard>
+              <HoverCardTrigger>
+                <img src="https://example.com/triceratops.jpg" alt="Triceratops" className="w-full h-auto" />
+              </HoverCardTrigger>
+              <HoverCardContent>
+                <h2 className="text-lg font-semibold">Triceratops</h2>
+                <p>Famous for its three horns, this herbivore was a formidable dinosaur.</p>
+              </HoverCardContent>
+            </HoverCard>
           </CarouselItem>
           <CarouselItem>
-            <img src="/images/dish3.jpg" alt="Delicious Dish 3" className="w-full rounded-lg" />
+            <HoverCard>
+              <HoverCardTrigger>
+                <img src="https://example.com/velociraptor.jpg" alt="Velociraptor" className="w-full h-auto" />
+              </HoverCardTrigger>
+              <HoverCardContent>
+                <h2 className="text-lg font-semibold">Velociraptor</h2>
+                <p>A small but fast predator known for its intelligence and hunting prowess.</p>
+              </HoverCardContent>
+            </HoverCard>
           </CarouselItem>
         </CarouselContent>
         <CarouselPrevious />
@@ -65,4 +49,6 @@ export default function HeroPage() {
       </Carousel>
     </div>
   );
-}
+};
+
+export default panelxyz;
